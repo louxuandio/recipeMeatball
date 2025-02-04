@@ -23,6 +23,13 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material3.Icon
 import androidx.compose.material.icons.filled.Star
 import androidx.compose.material3.HorizontalDivider
+//reference: https://www.allrecipes.com/recipe/259982/crock-pot-party-meatballs/
+//I asked ChatGPT what to import
+/*
+As this is the first project, I asked ChatGPT a lot, especially about padding, arrangement, modifier,
+Icons. I do not directly copy from ChatGPT. Then I get more familiar with Compose by Kotlin and now
+I do most of them without asking ChatGPT.
+ */
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -30,7 +37,6 @@ class MainActivity : ComponentActivity() {
         //enableEdgeToEdge()
         setContent{
             RecipeMeatballTheme {
-
                 Column (
                     horizontalAlignment = Alignment.CenterHorizontally,
                     verticalArrangement = Arrangement.SpaceEvenly,
@@ -46,6 +52,7 @@ class MainActivity : ComponentActivity() {
                             modifier = Modifier
                                 .padding(bottom = 8.dp)
                                 .weight(1f),
+                            //I asked ChatGPT about how to make my texts bold and bigger
                             style = TextStyle(
                                 fontSize = 24.sp,
                                 fontWeight = FontWeight.Bold
@@ -58,6 +65,7 @@ class MainActivity : ComponentActivity() {
                         )
                     }
 
+                    //ChatGPT teaches me about this HorizontalDivider
                     HorizontalDivider(
                         modifier = Modifier
                             .fillMaxWidth(),
